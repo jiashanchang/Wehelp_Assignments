@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Website</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="top">
+        My Website
+
+        <label for="burger"><img src="burger.jpg" /></label>
+
+        <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+        </ul>
+      </div>
+
+      <div class="header">Welcome to MyHome</div>
+
+      <div class="toprow">
+        <div class="promotion1" id="result"></div>
+        <div class="promotion2" id="result"></div>
+      </div>
+
+      <div class="row">
+        <div class="firstrow">
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+        </div>
+        <div class="secondrow">
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+          <div class="picture" id="result"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let src =
+        "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json";
+      fetch(src)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          let newData = data.result.results;
+          let result = document.querySelectorAll("#result");
+
+          for (let i = 0; i < newData.length; i++) {
+            if (i < 10) {
+              let site = newData[i].file;
+              let firstSite = site.toString().split("https:")[1];
+              let newFirstSite = "https:" + firstSite;
+
+              let imageElement = document.createElement("img");
+              imageElement.setAttribute("src", newFirstSite);
+              result[i].appendChild(imageElement.cloneNode(true));
+
+              let placename = document.createElement("id");
+              placename.textContent = newData[i].stitle;
+              result[i].appendChild(placename.cloneNode(true));
+            }
+          }
+        })
+        .catch(function (err) {
+          console.log("error!");
+        });
+    </script>
+  </body>
+</html>

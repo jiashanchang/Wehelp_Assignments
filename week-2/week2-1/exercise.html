@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Exercise</title>
+  </head>
+  <body>
+    <script>
+      // 要求一：函式與流程控制
+      // 完成以下函式，在函式中使用迴圈計算最小值到最大值之間，固定間隔的整數總和。其中你可
+      // 以假設 max 一定大於 min 且為整數，step 為正整數。
+      // 提醒：請勿更動題目中任何已經寫好的程式。
+
+      function calculate(min, max, step) {
+        let sum = 0;
+        for (let i = min; i <= max; i += step) {
+          sum += i;
+        }
+        return sum;
+      }
+
+      console.log("Answers for subject 1：");
+
+      console.log(calculate(1, 3, 1)); // 你的程式要能夠計算 1+2+3，最後印出 6
+      console.log(calculate(4, 8, 2)); // 你的程式要能夠計算 4+6+8，最後印出 18
+      console.log(calculate(-1, 2, 2)); // 你的程式要能夠計算 -1+1，最後印出 0
+
+      console.log("==============================");
+
+      // 要求二：Python 字典與列表、JavaScript 物件與陣列
+      // 完成以下函式，正確計算出非 manager 的員工平均薪資，所謂非 manager 就是在資料中
+      // manager 欄位標註為 False (Python) 或 false (JavaScript) 的員工，程式需考慮員工資料數量
+      // 不定的情況。
+
+      function avg(data) {
+        let count = 0;
+        let total = 0;
+        for (let key in data) {
+          let arr = data[key];
+          for (let i = 0; i < arr.length; i++) {
+            let items = arr[i];
+            if (arr[i].manager === false) {
+              total += arr[i].salary;
+              count += 1;
+            }
+          }
+        }
+        let average = total / count;
+        console.log(average);
+      }
+
+      console.log("Answers for subject 2：");
+
+      avg({
+        employees: [
+          {
+            name: "John",
+            salary: 30000,
+            manager: false,
+          },
+          {
+            name: "Bob",
+            salary: 60000,
+            manager: true,
+          },
+          {
+            name: "Jenny",
+            salary: 50000,
+            manager: false,
+          },
+          {
+            name: "Tony",
+            salary: 40000,
+            manager: false,
+          },
+        ],
+      });
+
+      console.log("==============================");
+
+      // 要求三：完成以下函式，最後能印出程式中註解所描述的結果。
+      // 提醒：請勿更動題目中任何已經寫好的程式。
+
+      function func(a) {
+        return function (x, y) {
+          return a + x * y;
+        };
+      }
+
+      console.log("Answers for subject 3：");
+
+      console.log(func(2)(3, 4)); // 你補完的函式能印出 2+(3*4) 的結果 14
+      console.log(func(5)(1, -5)); // 你補完的函式能印出 5+(1*-5) 的結果 0
+      console.log(func(-3)(2, 9)); //你補完的函式能印出 -3+(2*9) 的結果 15
+
+      // 一般形式為 func(a)(b, c) 要印出 a+(b*c) 的結果
+
+      console.log("==============================");
+
+      // 要求四：找出至少包含兩筆整數的列表 (Python) 或陣列 (JavaScript) 中，兩兩數字相乘後的最大值。
+      // 提醒：請勿更動題目中任何已經寫好的程式，不可以使用排序相關的內建函式。
+
+      function maxProduct(nums) {
+        if (nums.length < 2) {
+          return;
+        }
+
+        let a = nums[0];
+        let b = nums[1];
+
+        for (let i = 0; i < nums.length; i++)
+          for (let j = i + 1; j < nums.length; j++)
+            if (nums[i] * nums[j] > a * b) (a = nums[i]), (b = nums[j]);
+        return a * b;
+      }
+
+      console.log("Answers for subject 4：");
+
+      console.log(maxProduct([5, 20, 2, 6])); // 得到 120
+      console.log(maxProduct([10, -20, 0, 3])); // 得到 30
+      console.log(maxProduct([10, -20, 0, -3])); // 得到 60
+      console.log(maxProduct([-1, 2])); // 得到 -2
+      console.log(maxProduct([-1, 0, 2])); // 得到 0 或 -0
+      console.log(maxProduct([5, -1, -2, 0])); // 得到 2
+      console.log(maxProduct([-5, -2])); // 得到 10
+
+      console.log("==============================");
+
+      // 要求五：Given an array of integers, show indices of the two numbers such that they add up to a
+      // specific target. You can assume that each input would have exactly one solution, and you
+      // can not use the same element twice.
+
+      function twoSum(nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = 0; j < nums.length; j++) {
+            if (j === i) continue;
+            if (nums[i] + nums[j] === target) return [i, j];
+          }
+        }
+      }
+      let result = twoSum([2, 11, 7, 15], 9);
+
+      console.log("Answers for subject 5：");
+
+      console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>火箭隊招募，註冊登入送皮卡丘一隻</h1>
+    </div>
+    <div class="container">
+      <form action="/signup" method="POST">
+        <h3>註冊帳號</h3>
+        <div>姓名<input type="text" name="name" /></div>
+        <div>帳號<input type="text" name="username" /></div>
+        <div>密碼<input type="password" name="password" /></div>
+        <button>註冊</button>
+      </form>
+
+      <form action="/signin" method="POST">
+        <h3>登入系統</h3>
+        <div>帳號<input type="text" name="username" /></div>
+        <div>密碼<input type="password" name="password" /></div>
+        <button>登入</button>
+      </form>
+    </div>
+  </body>
+</html>

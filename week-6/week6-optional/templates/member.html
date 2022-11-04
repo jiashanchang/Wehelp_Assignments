@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>Member</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>歡迎來到火箭隊秘密基地</h1>
+    </div>
+    <div class="container">
+      <h3>{{name}}，就是這樣，喵~</h3>
+      <a href="/signout"><h3>登出系統</h3></a>
+
+      <form action="/message" method="POST">
+        <div><h3>快來留言吧</h3></div>
+        <div>內容<input type="text" name="content" /></div>
+        <button>送出</button>
+      </form>
+
+      <form action="/member">
+        {%for i in range(0, len)%}
+        <li><span>{{cur[i].name}}</span> ： {{cur[i].content}}</li>
+        {%endfor%}
+      </form>
+    </div>
+  </body>
+</html>

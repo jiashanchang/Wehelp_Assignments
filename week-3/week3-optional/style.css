@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+}
+
+.content{
+    max-width: 1920px;
+}
+
+.top{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    font-weight: bolder;
+}
+
+label img{
+    height: 22px;
+    width: 22px;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: right;
+    display: none;
+}
+
+.top ul{
+    float: right;
+}
+
+ul{
+    list-style-type:none; 
+    margin:0;
+    padding:0;
+}
+
+li{
+    float: left;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-indent:45px;
+}
+
+a{
+    float: right;
+    text-decoration: none;
+    display:block;
+}
+
+.header {
+    height: 300px;
+    width: 100%;
+    background: rgb(166, 240, 240);
+    font-size: 40px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: auto;
+}
+
+.promotion1, .promotion2 {
+    position: relative;
+    font-size: 20px;
+    height: 50px;
+    width: 580px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: rgb(218, 214, 214);
+    display: flex;
+    align-items: center;
+}
+
+.promotion1 img{
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    background-size: 100%;
+    color: black;
+}
+
+.promotion2 img{
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    background-size: 100%;
+    color: black;
+}
+
+.picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 100%;
+    width: 280px;
+    font-size: 20px;
+    background-color: rgb(218, 214, 214);
+    padding-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.picture img{
+    height: 173px;
+    width: 280px;
+}
+
+.picture .placename{
+    padding-top: 20px;
+}
+
+button{
+    margin: 30px auto;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+@media screen and (min-width:600px) and (max-width:1200px) { 
+    .header{float: none;width: 100%;}
+    #main{width: 100%;display: flex;justify-content: center;}
+    .picture{width: 45%;}
+    .picture img{width: 100%;height: 30vw;}
+    .promotion1, .promotion2 {width: 45%;}
+}
+
+@media screen and (min-width:360px) and (max-width:600px) { 
+    .header{float: none;width: 100%;font-size: 36px; text-align: center;}
+    label img{display: block;}
+    ul{display:none;}
+    #main{width: 100%;display: flex;justify-content: center;}
+    .picture{width: 90%;}
+    .picture img{width: 100%;height: 55vw;}
+    .promotion1, .promotion2 {width: 90%;}
+}

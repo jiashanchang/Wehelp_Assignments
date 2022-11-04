@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    /* width: 100%; */
+}
+
+.content{
+    max-width: 1920px;
+}
+
+.top{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    font-weight: bolder;
+}
+
+label img{
+    height: 22px;
+    width: 22px;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: right;
+    display: none;
+}
+
+.top ul{
+    float: right;
+}
+
+ul{
+    list-style-type:none; 
+    margin:0;
+    padding:0;
+}
+
+li{
+    float: left;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-indent:45px;
+}
+
+a{
+    float: right;
+    text-decoration: none;
+    display:block;
+}
+
+.header {
+    height: 300px;
+    width: 100%;
+    background: rgb(166, 240, 240);
+    font-size: 40px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toprow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.promotion1, .promotion2 {
+    position: relative;
+    font-size: 20px;
+    height: 50px;
+    width: 604px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    background-color: rgb(218, 214, 214);
+}
+
+.toprow .promotion1 ,.toprow .promotion2{
+    display: flex;
+    align-items: center;
+}
+
+.toprow .promotion1 img ,.toprow .promotion2 img{
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    background-size: 100%;
+    color: black;
+}
+
+.row img{
+    font-size: 20px;
+    height: auto;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: black;
+    line-height: 400px;
+}
+
+.firstrow ,.secondrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.picture {
+    position: relative;
+    font-size: 20px;
+    width: 292px;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.star{
+    height: 22px;
+    width: 22px;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    padding: 8px;
+    position: absolute;
+    text-align: right;
+    display: inline-block;
+}
+
+span{
+    background-color: rgb(218, 214, 214, 0.5);
+    height: 40px;
+    width: 292px;
+    left: 0;
+    bottom: 4.5px;
+    position: absolute;
+    display: inline-block;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:600px) and (max-width:1200px) { 
+    .header{float: none;width: 100%;}
+    .firstrow{display: flex;justify-content: center;}
+    .picture{width: 45%;}
+    .promotion1, .promotion2 {width: 45%;}
+    span{width: 100%;}
+}
+
+@media screen and (min-width:360px) and (max-width:600px) { 
+    .header{float: none;width: 100%;font-size: 36px; text-align: center;}
+    label img{display: block;}
+    ul{display:none;}
+    .picture{width: 90%;}
+    .promotion1, .promotion2 {width: 90%;}
+    .row .firstrow{display: flex;}
+    .toprow{flex-direction: column}
+    .firstrow, .secondrow{flex-direction: column}
+    span{width: 100%;}
+}
+
+
+
