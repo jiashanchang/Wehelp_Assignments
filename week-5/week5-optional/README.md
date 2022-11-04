@@ -16,7 +16,7 @@
   	);
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/message.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/message.jpg)
 
 - **確認新建立的資料表資訊**
 
@@ -26,7 +26,7 @@
   	DESC `message`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/descmess.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/descmess.jpg)
 
   - 輸入：
 
@@ -34,7 +34,7 @@
   	SHOW TABLES;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/showtables.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/showtables.jpg)
 
 - **確認上次建立的 member 資料表**
 
@@ -44,7 +44,7 @@
   	SELECT * FROM `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/allmember.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/allmember.jpg)
 
 - **一次新增多筆資料到 message 資料表**
 
@@ -60,7 +60,7 @@
   	(3, 'D產品有什麼功效', 200, '2019-05-18 12:17:30');
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/insertmess.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/insertmess.jpg)
 
 - **確認 message 資料表裡新增的資料**
 
@@ -70,7 +70,7 @@
   	SELECT * FROM `message`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/allmess.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/allmess.jpg)
 
 - **取得所有留⾔，結果須包含留⾔者會員的姓名**
 
@@ -81,7 +81,7 @@
   	INNER JOIN message on member.id=message.member_id;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/messcontent.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/messcontent.jpg)
 
 - **取得 member 資料表中欄位 username 是 test 的所有留⾔，資料中須包含留⾔者會員的姓名**
 
@@ -92,7 +92,7 @@
   	INNER JOIN message on member.username='test' and member.id=message.member_id;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/messcontest.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/messcontest.jpg)
 
 - **取得 member 資料表中欄位 username 是 test 的所有留⾔平均按讚數**
   - 輸入：
@@ -100,4 +100,4 @@
   	SELECT AVG(`like_count`) FROM `message`
   	INNER JOIN member on member.username='test' and member.id=message.member_id;
   ```
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-optional/images/avgliketest.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-optional/images/avgliketest.jpg)

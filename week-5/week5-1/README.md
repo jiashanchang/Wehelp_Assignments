@@ -3,7 +3,7 @@
 - **Log in MySQL**
 
   - Open Command Line, input "**mysql -u root -p**" and **password**.
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/login.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/login.jpg)
 
 - **Create DATABASE**
 
@@ -14,7 +14,7 @@
   ```
 
   - Modify the name of website that you want.
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/createDB.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/createDB.jpg)
 
 - **Confirm the created database**
 
@@ -24,7 +24,7 @@
   	SHOW DATABASES;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/showDB.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/showDB.jpg)
 
 - **USE DATABASE & CREATE TABLE**
 
@@ -44,7 +44,7 @@
   	);
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/createtable.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/createtable.jpg)
 
 - **Confirm the created table**
 
@@ -55,14 +55,14 @@
   	DESC `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/descmember.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/descmember.jpg)
   - Input：
 
   ```mysql
   	SHOW TABLES;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/login.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/login.jpg)
 
 - **Insert into the data**
 
@@ -73,7 +73,7 @@
   	VALUES ("Kim", "test", "test", 30, NOW());
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/insert1data.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/insert1data.jpg)
 
 - **Insert into a lot of data all at once.**
 
@@ -87,7 +87,7 @@
   	("Jim", "JJ", "jim", 600, "2021-09-18 17:13:30");
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/insert4data.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/insert4data.jpg)
 
 - **Select from all data of member**
 
@@ -97,7 +97,7 @@
   	SELECT * FROM `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/selectall.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/selectall.jpg)
 
 - **Select from all data of member, according to the column of time and sort in a reverse chronological order.**
 
@@ -110,7 +110,7 @@
   	DESC;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/time.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/time.jpg)
 
 - **As described on the previous requirements, get 2~4 member records after sorting.**
 
@@ -124,7 +124,7 @@
   	LIMIT 1, 3;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/time234.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/time234.jpg)
 
 - **To get the data which the username of member equal "test".**
 
@@ -136,7 +136,7 @@
   	WHERE `username` ='test';
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/test.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/test.jpg)
 
 - **As described on the previous requirements, get the data which the password of member also equal "test".**
 
@@ -148,7 +148,7 @@
   	WHERE `username` ='test' AND `password` ='test';
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/testtest.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/testtest.jpg)
 
 - **To find the data which the username of member equal "test" and update the name to "test2".**
 
@@ -160,7 +160,7 @@
   	WHERE `username`= 'test';
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/test2.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/test2.jpg)
 
 - **Select from all data of member**
 
@@ -170,7 +170,7 @@
   	SELECT * FROM `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/allmember.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/allmember.jpg)
 
 - **To calculate how many people in the data of member.**
 
@@ -180,7 +180,7 @@
   	SELECT COUNT(*) FROM `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/countmember.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/countmember.jpg)
 
 - **To sum all follower_count in member.**
 
@@ -190,11 +190,11 @@
   	SELECT SUM(`follower_count`) FROM `member`;
   ```
 
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/follower_count.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/follower_count.jpg)
 
 - **To calculate the average of all follower_count in member.**
   - Input：
   ```mysql
   	SELECT AVG(`follower_count`) FROM `member`;
   ```
-  - ![images](https://jiashanchang.github.io/wehelp_assignments/week-5/week5-1/images/avg.jpg)
+  - ![images](https://jiashanchang.github.io/Wehelp_Assignments/week-5/week5-1/images/avg.jpg)
