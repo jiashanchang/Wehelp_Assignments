@@ -112,7 +112,7 @@ def search_member():
             "data":{"id":cur[0],"name":cur[1],"username":cur[2]}
         })
     else:
-        return jsonify({"data":"null"})
+        return jsonify({"data":None})
 
 @app.route("/api/member",methods=["POST"])
 def update_member():
